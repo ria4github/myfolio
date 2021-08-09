@@ -1,0 +1,44 @@
+@import './common.scss';
+
+$headerBackground : rgba(0,0,0,0.8);
+$btnOnHoverBackground :  rgba(0,136,169,0.8);
+
+header {
+    @include flexContent;
+    padding : 10px 3%;
+   /* background-color : #24252A; */
+    background-color: $headerBackground;
+}
+
+
+.nav_links {
+    list-style : none;
+    display: inline-block;
+    padding: 0px 20px;
+    transition : all 0.3s ease 0s;
+}
+
+li a:hover {
+    color : rgba(248, 245, 245, 0.863);
+    /*transition : all 0.3s ease 0s; */
+    transition : opacity 0.3s cubic-bezier(0.25, 1, 0.25, 1)
+}
+
+.logo {
+    cursor: pointer;
+    margin-right:auto;
+}
+
+button {
+    margin-left: 10px;
+    padding : 9px 25px;
+    background-color:rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background-color: $btnOnHoverBackground;
+    }
+}
+
